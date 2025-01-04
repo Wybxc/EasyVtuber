@@ -1,0 +1,29 @@
+[project]
+name = "easyvtuber"
+version = "0.1.0"
+description = ""
+readme = "README.md"
+requires-python = ">=3.9,<3.11"
+dependencies = [
+    "numpy==1.26.4",
+    "scipy==1.13.1",
+    "matplotlib==3.9.4",
+    "protobuf==3.20.1",
+    "pynput==1.7.6",
+    "mediapipe==0.10.11",
+    "opencv_python==4.5.5.64",
+    "Pillow==9.1.0",
+    "pyanime4k==2.5.2",
+    "pyvirtualcam==0.9.1",
+    "torch==1.13.1+cu116; platform_system != 'Darwin'",
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu116"
+url = "https://download.pytorch.org/whl/cu116"
+explicit = true
+
+[tool.uv.sources]
+torch = [
+  { index = "pytorch-cu116", marker = "platform_system != 'Darwin'"},
+]
